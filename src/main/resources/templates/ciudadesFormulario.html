@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org/">
+    <head>
+        <title>UTH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Formulario Ciudades</h1>
+            <form action="#" method="POST" th:action="@{/guardarFormulario}" th:object="${ciudades}">
+                Id:<input type="text" id="id" name="id" th:field="*{id}" class="form-control"><br>
+                cod_Pais:<input type="text" id="codpais" name="codpais" th:field="*{codpais}" class="form-control"> <br>
+                cod_Ciudad:<input type="text" id="codciudad" name="codciudad" th:field="*{codciudad}" class="form-control"> <br>
+                Nombre:<input type="text" id="nombre" name="nombre" th:field="*{nombre}" class="form-control"> <br>
+                <button type="submit" class="btn btn-success">Guardar Ciudades</button>
+            </form>
+        </div>
+
+    </body>
+</html>
